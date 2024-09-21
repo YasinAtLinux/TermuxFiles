@@ -151,11 +151,6 @@ case $choice in
 esac
 EOF
 
-# Make those files executable
-chmod +x ~/.loginScripts/deb_login.sh
-chmod +x ~/.loginScripts/after_logout.sh
-chmod +x ~/.loginScripts/initial_prompt.sh
-
 # Create deb_login File
 cat << 'EOF' > ~/.loginScripts/deb_login.sh
 #!/bin/bash
@@ -166,6 +161,11 @@ proot-distro login debian --user yasin
 # After logout, return control to .bashrc
 exit 0
 EOF
+
+# Make those files executable
+chmod +x ~/.loginScripts/deb_login.sh
+chmod +x ~/.loginScripts/after_logout.sh
+chmod +x ~/.loginScripts/initial_prompt.sh
 
 # Fonts
 mkdir -p /data/data/com.termux/files/usr/share/fonts
