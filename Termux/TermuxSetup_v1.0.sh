@@ -151,6 +151,9 @@ case $choice in
 esac
 EOF
 
+# Make those files executable
+chmod +x ~/.loginScripts/deb_login.sh             chmod +x ~/.loginScripts/after_logout.sh          chmod +x ~/.loginScripts/initial_prompt.sh
+
 # Create deb_login File
 cat << 'EOF' > ~/.loginScripts/deb_login.sh
 #!/bin/bash
@@ -166,11 +169,6 @@ EOF
 mkdir -p /data/data/com.termux/files/usr/share/fonts
 mv /data/data/com.termux/files/home/storage/shared/Download/*.ttf /data/data/com.termux/files/usr/share/fonts
 ln -s /data/data/com.termux/files/usr/share/fonts/JetBrainsMonoNerdFont-Medium.ttf ~/.termux/font.ttf
-
-# Make those files executable
-chmod +x ~/.loginScripts/deb_login.sh
-chmod +x ~/.loginScripts/after_logout.sh
-chmod +x ~/.loginScripts/initial_prompt.sh
 
 # Motd File
 cd /data/data/com.termux/files/usr/etc
