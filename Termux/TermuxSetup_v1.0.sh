@@ -152,7 +152,9 @@ esac
 EOF
 
 # Make those files executable
-chmod +x ~/.loginScripts/deb_login.sh             chmod +x ~/.loginScripts/after_logout.sh          chmod +x ~/.loginScripts/initial_prompt.sh
+chmod +x ~/.loginScripts/deb_login.sh
+chmod +x ~/.loginScripts/after_logout.sh
+chmod +x ~/.loginScripts/initial_prompt.sh
 
 # Create deb_login File
 cat << 'EOF' > ~/.loginScripts/deb_login.sh
