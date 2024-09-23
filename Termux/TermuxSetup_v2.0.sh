@@ -133,7 +133,7 @@ cyan "Select an option:"
 green "1) Login to Debian"
 green "2) Login to Void"
 green "3) Stay in Termux"
-read -p "$(yellow 'Enter your choice [1-2] : ')" choice
+read -p "$(yellow 'Enter your choice [1-3] : ')" choice
 
 case $choice in
     1)
