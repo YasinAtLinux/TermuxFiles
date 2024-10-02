@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1="\[\e[1;38;2;255;166;0m\]Yasin\[\e[01;37m\] at \[\e[01;33m\]Debian\[\e[0m\] \[\e[1;37m\]in \[\e[01;36m\]\W\n\[\e[1;37m\]$ \[\e[0;92m\]"
+    PS1="\[\e[1;38;2;255;166;0m\]Yasin\[\e[01;37m\] at \[\e[01;33m\]Debian\[\e[0m\] \[\e[1;37m\]in \[\e[01;36m\]\W\n\[\e[1;37m\]$ \[\e[0m\]"
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
