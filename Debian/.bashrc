@@ -112,8 +112,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+eval "$(starship init bash)"
+
 # Clear the terminal and display welcom message
 clear
 yellow() { echo -e "\e[01;33m$1\e[0m"; }
-yellow "		Welcome To Debian!
-"
+yellow "		Welcome To Debian!"

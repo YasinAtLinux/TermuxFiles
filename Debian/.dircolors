@@ -4,5 +4,5 @@ DIR 01;96
 # Colors for file extensions
 *.sh 01;92
 *.sh 0;92                                                                                           # Ensure all normal files are set to white
-NORMAL 0;37
-FILE 38;2;250;215;160
+#NORMAL 0;37
+#FILE 38;2;250;215;160
