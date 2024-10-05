@@ -24,11 +24,15 @@ show_header
 green "Updating and upgrading packages..."
 apt update && apt upgrade -y
 
-
-# Install proot and proot-distro if not installed
-green "Installing proot and proot-distro..."
-sleep 2
-apt install proot proot-distro -y
+# Check if proot and proot-distro are installed
+if dpkg -l | grep -q proot && dpkg -l | grep -q proot-distro; then
+    green "Proot and proot-distro are already installed."
+    sleep 2
+else
+    green "Installing proot and proot-distro..."
+    sleep 2
+    apt install proot proot-distro -y
+fi
 
 # Function to display options
 show_options() {
